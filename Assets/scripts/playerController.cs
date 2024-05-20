@@ -16,7 +16,10 @@ public class NewBehaviourScript : MonoBehaviour
     private bool isGrounded;
     private int availableJumps = 2;
 
-    public static NewBehaviourScript instance;
+    public static NewBehaviourScript instance {
+        get;
+        private set;
+    }
 
     private void Awake()
     {
