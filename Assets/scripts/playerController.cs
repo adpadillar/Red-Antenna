@@ -16,6 +16,19 @@ public class NewBehaviourScript : MonoBehaviour
     private bool isGrounded;
     private int availableJumps = 2;
 
+    public static NewBehaviourScript instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            return;
+        } 
+
+        Destroy(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -68,10 +81,9 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void Jump()
     {
-        if (isGrounded || availableJumps > 0) {
-            availableJumps--;
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        }
+        if ((availableJumps - 1) <= 0) return;
+        availableJumps--;
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
 
     private void ApplyMovement()
