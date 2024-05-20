@@ -32,7 +32,7 @@ public class GUIMenu : MonoBehaviour
       prefix += parts[i];
     }
 
-    while(number >= 0) {
+    while(number > 0) {
       yield return new WaitForSeconds(1);
       number--;
       timeText.text = prefix + ": " + number.ToString();
