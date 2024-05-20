@@ -13,9 +13,6 @@ public class coinScript : MonoBehaviour
     void Start()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<NewBehaviourScript>();   
-        coinText = GameObject.FindGameObjectWithTag("CoinsCounter").GetComponent<TMP_Text>();
-
-        Debug.Log(coinText.text);
     }
 
     // Update is called once per frame
@@ -27,12 +24,11 @@ public class coinScript : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         // If the player collides with the coin, destroy the coin
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.tag == "Player")
         {
             playerController.coins++;
             coinText.text = "Coins: " + playerController.coins.ToString();
             Destroy(gameObject);
-            // Debug.Log("Coins: " + playerController.coins.ToString());
         }
     }
 }
