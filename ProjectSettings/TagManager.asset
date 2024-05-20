@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - CoinsCounter
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 224755895
+    locked: 0
+  - name: front
+    uniqueID: 3465981815
+    locked: 0
+  - name: platform
+    uniqueID: 1944798717
+    locked: 0
+  - name: decoration
+    uniqueID: 1780851111
+    locked: 0
+  - name: limits
+    uniqueID: 3097393699
+    locked: 0
+  - name: player
+    uniqueID: 2773800811
+    locked: 0
